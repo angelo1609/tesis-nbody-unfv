@@ -24,10 +24,11 @@ El límite empírico de estabilidad es **régimen-dependiente**: HD 188753 (par 
 - **Tiempo de integración**: 10⁵ años
 - **Grilla**: 10×10×3×3 (prueba) → 30×30×5×3 = 13,500 nodos (final)
 - **Variables**: semieje mayor (a), excentricidad (e), inclinación (i), anomalía media inicial (M₀)
-- **Integradores comparados**:
-  - MATLAB `ode45` (RK45, no simpléctico)
-  - Julia `KahanLi8` (simpléctico de octavo orden)
-- **Validación cruzada** entre ambos integradores
+- **Integrador**: Julia `KahanLi8` (simpléctico de octavo orden, alta conservación de invariantes)
+- **Jerarquía de validación numérica** (sin cruzar lenguajes):
+  1. Conservación de energía y momento angular (cada simulación)
+  2. Test analítico kepleriano (caso de referencia antes del barrido)
+  3. Validación contra JPL Horizons (trayectoria de Artemis II)
 
 ## Estructura
 
@@ -40,11 +41,10 @@ tesis-nbody-unfv/
 │   ├── devcontainer.json
 │   └── setup.sh
 ├── codigo/
-│   ├── julia/                    # Integradores simplécticos
+│   ├── julia/                    # Integrador simpléctico KahanLi8
 │   │   └── Project.toml
-│   ├── python/                   # Figuras y post-procesamiento
-│   │   └── requirements.txt
-│   └── matlab/                   # Validación cruzada (ode45)
+│   └── python/                   # Figuras y post-procesamiento
+│       └── requirements.txt
 ├── datos/                        # Condiciones iniciales JPL Horizons
 ├── resultados/                   # Salidas de simulaciones (gitignored)
 └── docs/                         # Notas de metodología
@@ -54,7 +54,6 @@ tesis-nbody-unfv/
 
 - Julia 1.10+
 - Python 3.11+
-- MATLAB R2024a+ (opcional, solo validación cruzada)
 - Semillas RNG documentadas en cada script
 - Condiciones iniciales obtenidas de JPL Horizons
 
