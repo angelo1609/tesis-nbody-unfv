@@ -1,0 +1,32 @@
+name = "TesisNBodyUNFV"
+uuid = "00000000-0000-0000-0000-000000000001"
+authors = ["Juan Angelo Calatayud Fernandez"]
+version = "0.1.0"
+
+[deps]
+DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
+OrdinaryDiffEq = "1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+JLD2 = "033835bb-8acc-5ee8-8aae-3f567f8a3819"
+ProgressMeter = "92933f4c-e287-5a05-a399-4b506db050ca"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
+FFTW = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"
+
+[compat]
+julia = "1.10"
+DifferentialEquations = "7"
+OrdinaryDiffEq = "6"
+StaticArrays = "1"
+CSV = "0.10"
+DataFrames = "1"
+JLD2 = "0.4"
+ProgressMeter = "1"
+Plots = "1"
+FFTW = "1"

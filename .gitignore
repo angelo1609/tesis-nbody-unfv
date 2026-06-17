@@ -1,0 +1,72 @@
+# Resultados de simulaciones (regenerables, suelen ser muy pesados)
+resultados/*.csv
+resultados/*.h5
+resultados/*.hdf5
+resultados/*.jld2
+resultados/*.mat
+resultados/*.npy
+resultados/*.npz
+resultados/checkpoints/
+!resultados/.gitkeep
+
+# Julia
+codigo/julia/Manifest.toml
+codigo/julia/.CondaPkg/
+codigo/julia/deps/build.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# MATLAB
+*.asv
+*.m~
+slprj/
+
+# LaTeX (por si se incluye redacción en este repo más adelante)
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Datos pesados (descargables; mantener solo en JPL Horizons)
+datos/*.bsp
+datos/horizons_*.txt
+!datos/.gitkeep
+
+# Codespaces / Docker temporales
+.docker-build/
+
+# Secretos (nunca subir)
+.env
+.env.local
+*.key
+*.pem
