@@ -52,8 +52,9 @@ tesis-nbody-unfv/
 
 ## Reproducibilidad
 
-- Julia 1.10+
-- Python 3.11+
+- Julia 1.10+ (entorno principal de simulación)
+- MATLAB R2022a+ (visualización de mapas de estabilidad + Symbolic Math Toolbox para criterios analíticos)
+- Python 3.11+ (análisis estadístico y consulta de archivos NASA)
 - Semillas RNG documentadas en cada script
 - Condiciones iniciales obtenidas de JPL Horizons
 
