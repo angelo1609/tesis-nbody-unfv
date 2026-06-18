@@ -22,7 +22,7 @@ El límite empírico de estabilidad es **régimen-dependiente**: HD 188753 (par 
 
 - **Test particle approach** en ambos sistemas
 - **Tiempo de integración**: 10⁵ años
-- **Grilla**: 10×10×3×3 (prueba) → 30×30×5×3 = 13,500 nodos (final)
+- **Grilla**: 10×10×3×3 = 900 (prueba) → 50×50×5×3 = 37,500 nodos (final)
 - **Variables**: semieje mayor (a), excentricidad (e), inclinación (i), anomalía media inicial (M₀)
 - **Integrador**: Julia `KahanLi8` (simpléctico de octavo orden, alta conservación de invariantes)
 - **Jerarquía de validación numérica** (sin cruzar lenguajes):
